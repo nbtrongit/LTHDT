@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LTHDT
 {
-    class Hinh
+    abstract class Hinh
     {
 		public string MauSac { get; set; }
 		public virtual void NhapHinh(string ghiChu)
@@ -15,9 +15,10 @@ namespace LTHDT
 			Console.WriteLine("Nhập màu của hình");
 			this.MauSac = Console.ReadLine();
 		}
-		public virtual double ChuVi()
-        {
+		/*public virtual double ChuVi()
+		 {
 			return 0;
-        }
+		 }*/
+		public abstract double ChuVi();
 	}
 }

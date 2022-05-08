@@ -5,4 +5,19 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="DAL\**" />
+    <Compile Remove="ENTITIES\**" />
+    <Compile Remove="SERVICES\**" />
+    <Compile Remove="WebApplication1\**" />
+    <EmbeddedResource Remove="DAL\**" />
+    <EmbeddedResource Remove="ENTITIES\**" />
+    <EmbeddedResource Remove="SERVICES\**" />
+    <EmbeddedResource Remove="WebApplication1\**" />
+    <None Remove="DAL\**" />
+    <None Remove="ENTITIES\**" />
+    <None Remove="SERVICES\**" />
+    <None Remove="WebApplication1\**" />
+  </ItemGroup>
+
 </Project>
