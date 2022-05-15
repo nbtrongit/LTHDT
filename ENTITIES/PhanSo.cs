@@ -38,7 +38,7 @@ namespace ENTITIES
         public PhanSo Cong(PhanSo b)
         {
             PhanSo kq = new PhanSo();
-            kq.TuSo = this.TuSo + b.MauSo + this.MauSo + b.TuSo;
+            kq.TuSo = this.TuSo * b.MauSo + this.MauSo * b.TuSo;
             kq.MauSo = this.MauSo * b.MauSo;
             return kq;
         }

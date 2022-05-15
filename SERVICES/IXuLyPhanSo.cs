@@ -9,6 +9,7 @@ namespace SERVICES
 {
     public interface IXuLyPhanSo
     {
-        PhanSo cong2PhanSo(int tu1, int mau1, int tu2, int mau2);
+        //PhanSo cong2PhanSo(int tu1, int mau1, int tu2, int mau2);
+        PhanSoServiceResult cong2PhanSo(int tu1, int mau1, int tu2, int mau2);
     }
 }

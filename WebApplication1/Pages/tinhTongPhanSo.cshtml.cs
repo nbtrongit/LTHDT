@@ -11,7 +11,7 @@ namespace WebApplication1.Pages
 {
     public class tinhTongPhanSoModel : PageModel
     {
-        private IXuLyPhanSo xuLyPhanSo;
+        private IXuLyPhanSo xuLy;
         public string ketQua;
         [BindProperty]
         public int tu1 { get; set; }
@@ -27,14 +27,21 @@ namespace WebApplication1.Pages
         }
         public tinhTongPhanSoModel()
         {
-            xuLyPhanSo = new XuLyPhanSo();
+            xuLy = new XuLyPhanSo();
         }
         public void OnPost()
         {
-            //phụ thuộc khá nhiều vào XuLyPhanSo mà cái cần chỉ là hàm cong => tạo interface trong services
+            //phụ thuộc khá nhiều vào XuLyPhanSo mà cái cần chỉ là hàm cộng => tạo interface trong services
             //XuLyPhanSo xuLy = new XuLyPhanSo();
-            var kq = xuLyPhanSo.cong2PhanSo(tu1, mau1, tu2, mau2);
-            ketQua = kq.xuatPhanSo();
+            var kq = xuLy.cong2PhanSo(tu1, mau1, tu2, mau2);
+            if (kq.IsSuccess)
+            {
+                ketQua = kq.Data.xuatPhanSo();
+            }
+            else
+            {
+                ketQua = kq.Message;
+            }
         }
     }
 }
