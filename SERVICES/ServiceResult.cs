@@ -7,17 +7,18 @@ using ENTITIES;
 
 namespace SERVICES
 {
-    public class PhanSoServiceResult
+    //public class PhanSoServiceResult
+    public class ServiceResult<T>
     {
         //kiểm tra có thành công hay không
         public bool IsSuccess { get; set; }
-        public PhanSo Data { get; set; }
-        public string Message { get; set; }
-        public PhanSoServiceResult(bool isSuccess, PhanSo data, string message)
+        public T Data { get; set; }
+        public string ErrorMessage { get; set; }
+        public ServiceResult(bool isSuccess, T data, string message)
         {
             IsSuccess = isSuccess;
             Data = data;
-            Message = message;
+            ErrorMessage = message;
         }
     }
 }

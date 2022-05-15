@@ -40,7 +40,7 @@ namespace WebApplication1.Pages
             }
             else
             {
-                ketQua = kq.Message;
+                ketQua = kq.ErrorMessage;
             }
         }
     }
